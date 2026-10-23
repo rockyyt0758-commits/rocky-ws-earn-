@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROCKY WS EARN</title>
+<style>
+:root{--green:#39ff14;--bg:#020907;--panel:#071713;--cyan:#70fff0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:white;font-family:Arial,sans-serif}
+header{padding:18px 6%;display:flex;justify-content:space-between;
+align-items:center;border-bottom:1px solid #164a32;gap:12px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:900;color:var(--green)}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+a{color:white;text-decoration:none}
+nav a:hover{color:var(--green)}
+.hero{padding:65px 6%;background:radial-gradient(ellipse at 80% 30%,#10451c,transparent 50%)}
+.tag{color:var(--green)}
+h1{font-size:clamp(38px,7vw,70px);margin:15px 0}
+h1 span{color:var(--green)}
+.hero p{line-height:1.8;color:#c6e5dd;max-width:580px}
+.btn{display:inline-block;padding:14px 22px;border-radius:12px;
+background:var(--green);color:#001600;font-weight:bold;border:0;cursor:pointer}
+.outline{background:transparent;color:var(--green);border:1px solid var(--green)}
+section{padding:35px 6%}
+h2{color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid #174b36;border-radius:16px;padding:22px}
+.card p{color:#b5d2ca;line-height:1.6}
+.icon{font-size:30px}
+input{width:100%;padding:13px;margin:7px 0 15px;border-radius:8px;
+border:1px solid #275440;background:#020907;color:white}
+.notice{border:1px solid #9d7b28;color:#ffe49b;padding:14px;border-radius:10px;line-height:1.6}
+footer{text-align:center;padding:25px;border-top:1px solid #174b36;color:#a7c7bc}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">♛ ROCKY WS EARN</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#payment">Payment</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="tag">● WORK • EARN • GROW</div>
+  <h1>ROCKY <span>WS EARN</span></h1>
+  <h3>Work From Home • Learn New Skills</h3>
+  <p>Explore online work categories, learn digital skills and understand how genuine task-based work operates.</p>
+  <a class="btn" href="#work">Explore Work →</a>
+  <a class="btn outline" href="#about">Learn More</a>
+</section>
+
+<section>
+  <div class="grid">
+    <div class="card"><div class="icon">🛡️</div><h3>Safety First</h3><p>Never share your password, OTP or UPI PIN.</p></div>
+    <div class="card"><div class="icon">💻</div><h3>Digital Skills</h3><p>Explore useful online work and learning activities.</p></div>
+    <div class="card"><div class="icon">📋</div><h3>Clear Instructions</h3><p>Review task requirements before participating.</p></div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Popular Work Categories</h2>
+  <div class="grid">
+    <div class="card"><div class="icon">📝</div><h3>Data Entry</h3><p>Explore typing and data organization activities.</p><button class="btn" onclick="showInfo('Data Entry')">Explore</button></div>
+    <div class="card"><div class="icon">📱</div><h3>Social Media</h3><p>Learn content planning and social media skills.</p><button class="btn" onclick="showInfo('Social Media')">Explore</button></div>
+    <div class="card"><div class="icon">🎨</div><h3>Design Work</h3><p>Learn graphics and creative design basics.</p><button class="btn" onclick="showInfo('Design Work')">Explore</button></div>
+    <div class="card"><div class="icon">🎬</div><h3>Video Editing</h3><p>Explore video editing and content creation.</p><button class="btn" onclick="showInfo('Video Editing')">Explore</button></div>
+  </div>
+  <p id="workMessage" aria-live="polite"></p>
+</section>
+
+<section id="about">
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><h3>01. Explore</h3><p>Review available work categories.</p></div>
+    <div class="card"><h3>02. Learn</h3><p>Read the instructions and requirements.</p></div>
+    <div class="card"><h3>03. Verify</h3><p>Confirm the legitimacy of the work provider.</p></div>
+  </div>
+  <p class="notice">Demo website: no real jobs, account system, earnings, or payments are enabled.</p>
+</section>
+
+<section id="payment">
+  <h2>UPI Payment Information</h2>
+  <div class="card">
+    <h3>Payment QR — Demo Only</h3>
+    <p>A real QR and verified payment process have not been configured.</p>
+    <p>For a real service, use a legitimate payment provider and verify transactions securely on a server before approving them.</p>
+    <button class="btn outline" onclick="alert('Demo only: no payment was made or verified.')">View Demo Status</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="logo">♛ ROCKY WS EARN</div>
+  <p>Work • Learn • Grow</p>
+  <p>© 2026 ROCKY WS EARN</p>
+</footer>
+
+<script>
+function showInfo(category){
+  document.getElementById('workMessage').textContent =
+    category + ': This is a demo category. No live tasks are available.';
+}
+</script>
+</body>
+</html>
