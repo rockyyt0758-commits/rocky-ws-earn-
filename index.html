@@ -1,131 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ROCKY WS EARN</title>
+<meta name="theme-color" content="#020804">
+<meta name="description" content="ROCKY WS EARN - Work, Learn, Grow. Explore digital skills and join our Telegram community.">
+<title>ROCKY WS EARN | Work • Learn • Grow</title>
 <style>
-:root{--green:#39ff14;--bg:#020907;--panel:#071713;--cyan:#70fff0}
+:root{--green:#65ff00;--lime:#b4ff65;--bg:#020704;--panel:#07140b;--line:#285c24}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:white;font-family:Arial,sans-serif}
-header{padding:18px 6%;display:flex;justify-content:space-between;
-align-items:center;border-bottom:1px solid #164a32;gap:12px;flex-wrap:wrap}
-.logo{font-size:23px;font-weight:900;color:var(--green)}
-nav{display:flex;gap:16px;flex-wrap:wrap}
-a{color:white;text-decoration:none}
-nav a:hover{color:var(--green)}
-.hero{padding:65px 6%;background:radial-gradient(ellipse at 80% 30%,#10451c,transparent 50%)}
-.tag{color:var(--green)}
-h1{font-size:clamp(38px,7vw,70px);margin:15px 0}
-h1 span{color:var(--green)}
-.hero p{line-height:1.8;color:#c6e5dd;max-width:580px}
-.btn{display:inline-block;padding:14px 22px;border-radius:12px;
-background:var(--green);color:#001600;font-weight:bold;border:0;cursor:pointer}
-.outline{background:transparent;color:var(--green);border:1px solid var(--green)}
-section{padding:35px 6%}
-h2{color:var(--green)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
-.card{background:var(--panel);border:1px solid #174b36;border-radius:16px;padding:22px}
-.card p{color:#b5d2ca;line-height:1.6}
-.icon{font-size:30px}
-input{width:100%;padding:13px;margin:7px 0 15px;border-radius:8px;
-border:1px solid #275440;background:#020907;color:white}
-.notice{border:1px solid #9d7b28;color:#ffe49b;padding:14px;border-radius:10px;line-height:1.6}
-footer{text-align:center;padding:25px;border-top:1px solid #174b36;color:#a7c7bc}
+body{margin:0;background:var(--bg);color:#f5fff4;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 75% 15%,#0a3817 0,transparent 36%),radial-gradient(ellipse at 5% 65%,#08220e 0,transparent 35%)}
+a{color:inherit;text-decoration:none}
+button,a{ -webkit-tap-highlight-color:transparent}
+.wrap{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#020704ed;border-bottom:1px solid #3e9c2c;backdrop-filter:blur(14px)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:1000;font-size:clamp(17px,3vw,27px);font-style:italic;white-space:nowrap}
+.logo{width:54px;height:54px;display:grid;place-items:center;clip-path:polygon(50% 0,92% 20%,84% 76%,50% 100%,16% 76%,8% 20%);background:linear-gradient(145deg,#c7ff91,#28ff00 50%,#123b15);color:#031006;font-size:29px;font-weight:1000;text-shadow:0 1px #fff;box-shadow:0 0 25px #5bff0066}
+.green{color:var(--green)}
+.tagline{font-size:9px;letter-spacing:4px;text-align:center;margin-top:4px;color:#b8d7b7}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:13px}
+.navlinks a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 19px;border-radius:30px;border:1px solid var(--green);font-weight:800;font-size:13px;transition:.25s;cursor:pointer}
+.btn-primary{background:linear-gradient(100deg,#a8ff65,#40f500);color:#061004;box-shadow:0 0 22px #52ff0040}
+.btn-outline{background:#020704d9;color:white}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 25px #62ff0080}
+.menu{display:none;background:none;border:1px solid var(--green);color:var(--green);font-size:24px;border-radius:9px;padding:5px 12px}
+.hero{position:relative;min-height:440px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:18px;padding-top:35px;padding-bottom:32px}
+.hero:after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.eyebrow{display:inline-block;border:1px solid #4ba52d;border-radius:25px;padding:9px 14px;color:#baff9c;font-size:11px;letter-spacing:1px;background:#09200d}
+h1{font-size:clamp(40px,6.4vw,76px);line-height:.98;letter-spacing:-2px;margin:22px 0 16px;font-weight:1000;font-style:italic}
+h1 span{color:var(--green);text-shadow:0 0 25px #5dff0044}
+.hero p{max-width:470px;line-height:1.65;color:#d0e4d0;font-size:15px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:23px 0}
+.perks{display:flex;gap:20px;flex-wrap:wrap;color:#d6ead3;font-size:12px;margin-top:23px}
+.perks b{color:var(--green);margin-right:5px}
+.hero-art{min-height:350px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #36a82c;border-radius:28px;background:radial-gradient(ellipse at 50% 45%,#1c651c 0,#07310f 34%,#031007 72%);box-shadow:inset 0 0 50px #36ff001a,0 0 30px #28ff0014}
+.hero-art:before,.hero-art:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #6aff0077;transform:rotate(45deg);box-shadow:0 0 35px #4cff0030}
+.hero-art:after{width:190px;height:190px}
+.gamer{position:relative;z-index:1;text-align:center;padding:28px}
+.gamer .crown{font-size:85px;line-height:1;color:var(--green);text-shadow:0 0 30px #65ff00}
+.gamer .mascot{font-size:clamp(75px,13vw,145px);filter:drop-shadow(0 0 17px #62ff00);line-height:1.1}
+.gamer h2{font-size:clamp(25px,4vw,40px);margin:8px 0}
+.gamer p{font-size:11px;letter-spacing:5px;text-align:center}
+.floating{position:absolute;color:var(--green);font-weight:900;font-style:italic;font-size:16px;right:18px;top:28px;transform:rotate(-9deg)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px auto 45px}
+.stat{border:1px solid var(--line);border-radius:12px;padding:15px 8px;text-align:center;background:linear-gradient(130deg,#0a2110,#030906)}
+.stat strong{display:block;color:var(--green);font-size:23px;margin-bottom:5px}
+.stat span{font-size:11px;color:#c7ddc5}
+section{scroll-margin-top:90px}
+.section-head{margin-bottom:22px}
+.kicker{font-size:12px;font-weight:900;color:var(--green);letter-spacing:1.5px}
+h2.section-title{font-size:clamp(28px,4vw,43px);margin:8px 0}
+.section-head p{color:#c3d6c2;line-height:1.6;margin:8px 0}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{position:relative;overflow:hidden;border:1px solid #42c92d;border-radius:17px;padding:20px 17px;background:linear-gradient(145deg,#0b2813,#030906 72%);transition:.25s}
+.card:before{content:"";position:absolute;top:-45px;right:-45px;width:120px;height:120px;background:#45ff0010;filter:blur(25px)}
+.card:hover{transform:translateY(-6px);box-shadow:0 8px 30px #40ff0020;border-color:var(--green)}
+.card-icon{width:58px;height:58px;display:grid;place-items:center;border:1px solid var(--green);border-radius:17px;background:#153d1b;color:var(--green);font-size:27px;box-shadow:0 0 17px #46ff0024}
+.card h3{font-size:19px;margin:18px 0 8px}
+.card p{font-size:13px;line-height:1.6;color:#c6d9c4;min-height:62px}
+.card .btn{width:100%;padding:10px 8px;font-size:12px;margin-top:8px}
+.community{margin:55px 0 45px;padding:27px;border:1px solid #44c62c;border-radius:20px;background:linear-gradient(110deg,#09230f,#030906 60%);display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.community h2{font-size:clamp(25px,4vw,38px);margin:8px 0}
+.community p{color:#ccdeca;line-height:1.6;font-size:14px}
+.telegram-cards{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.telegram-card{text-align:center;padding:19px 12px;border:1px solid #3cba2b;border-radius:15px;background:#041109}
+.telegram-icon{width:55px;height:55px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;background:linear-gradient(140deg,#7dff46,#137e19);color:#031006;font-size:25px;font-weight:900}
+.telegram-card h3{font-size:16px;margin:6px 0}
+.telegram-card p{font-size:12px;min-height:38px}
+.telegram-card .btn{width:100%;padding:10px 5px;font-size:12px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 24px}
+.step{border:1px solid #276e25;border-radius:14px;padding:19px;background:#06120a;display:flex;gap:13px;align-items:flex-start}
+.number{flex:0 0 42px;height:42px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--green);color:var(--green);font-weight:900}
+.step h3{font-size:14px;margin:3px 0 8px;color:var(--green)}
+.step p{font-size:12px;line-height:1.55;color:#c6d8c5;margin:0}
+.warning{border:1px solid #e4ad16;border-radius:12px;padding:14px 16px;color:#ffe67b;background:#201b05;font-size:12px;line-height:1.65;margin:24px 0 35px}
+footer{border-top:1px solid #347c25;background:#030906;padding:24px 0}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.footlinks,.social{display:flex;gap:17px;flex-wrap:wrap;font-size:12px}
+.footlinks a:hover{color:var(--green)}
+.copyright{border-top:1px solid #18391b;margin-top:20px;padding-top:16px;color:#9bb49a;font-size:11px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.reveal{animation:rise .8s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:850px){.navlinks{gap:12px}.navlinks a:not(.btn){display:none}.hero{grid-template-columns:1fr}.hero-art{min-height:300px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.community{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.stat strong{font-size:20px}}
+@media(max-width:520px){.wrap{width:92%}.nav{min-height:66px}.brand{font-size:17px;gap:8px}.logo{width:43px;height:43px;font-size:24px}.tagline{letter-spacing:2px;font-size:8px}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;padding:18px;background:#030906;border-bottom:1px solid var(--green);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a:not(.btn){display:block;padding:8px}.menu{display:block}.hero{padding-top:28px}.hero-art{min-height:260px}.gamer .crown{font-size:60px}.gamer .mascot{font-size:88px}.stats{grid-template-columns:repeat(2,1fr);margin-bottom:35px}.cards{gap:10px}.card{padding:14px 12px}.card-icon{width:48px;height:48px;font-size:23px}.card h3{font-size:16px}.card p{font-size:12px;min-height:100px}.card .btn{font-size:11px}.community{padding:18px;margin-top:38px}.telegram-cards{gap:9px}.telegram-card{padding:15px 9px}.telegram-card h3{font-size:14px}.telegram-card p{font-size:11px}.actions .btn{flex:1;padding:12px 10px;font-size:12px}.perks{gap:12px}.copyright{line-height:1.7}}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">♛ ROCKY WS EARN</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#payment">Payment</a>
-    <a href="#telegram">Telegram</a>
-  </nav>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="ROCKY WS EARN Home">
+      <span class="logo">R</span>
+      <span>ROCKY <span class="green">WS EARN</span><span class="tagline">WORK • LEARN • GROW</span></span>
+    </a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home">⌂ Home</a><a href="#work">▣ Work</a><a href="#about">♙ About</a>
+      <a href="#telegram">➤ Telegram</a><a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">➤ Join Now</a>
+    </nav>
+    <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+  </div>
 </header>
 
 <main>
-<section class="hero" id="home">
-  <div class="tag">● WORK • EARN • GROW</div>
-  <h1>ROCKY <span>WS EARN</span></h1>
-  <h3>Work From Home • Learn New Skills</h3>
-  <p>Explore online work categories, learn digital skills and understand how genuine task-based work operates.</p>
-  <a class="btn" href="#work">Explore Work →</a>
-  <a class="btn outline" href="#about">Learn More</a>
-</section>
-
-<section>
-  <div class="grid">
-    <div class="card"><div class="icon">🛡️</div><h3>Safety First</h3><p>Never share your password, OTP or UPI PIN.</p></div>
-    <div class="card"><div class="icon">💻</div><h3>Digital Skills</h3><p>Explore useful online work and learning activities.</p></div>
-    <div class="card"><div class="icon">📋</div><h3>Clear Instructions</h3><p>Review task requirements before participating.</p></div>
-  </div>
-</section>
-
-<section id="work">
-  <h2>Popular Work Categories</h2>
-  <div class="grid">
-    <div class="card"><div class="icon">📝</div><h3>Data Entry</h3><p>Explore typing and data organization activities.</p><button class="btn" onclick="showInfo('Data Entry')">Explore</button></div>
-    <div class="card"><div class="icon">📱</div><h3>Social Media</h3><p>Learn content planning and social media skills.</p><button class="btn" onclick="showInfo('Social Media')">Explore</button></div>
-    <div class="card"><div class="icon">🎨</div><h3>Design Work</h3><p>Learn graphics and creative design basics.</p><button class="btn" onclick="showInfo('Design Work')">Explore</button></div>
-    <div class="card"><div class="icon">🎬</div><h3>Video Editing</h3><p>Explore video editing and content creation.</p><button class="btn" onclick="showInfo('Video Editing')">Explore</button></div>
-  </div>
-  <p id="workMessage" aria-live="polite"></p>
-</section>
-
-<section id="about">
-  <h2>How It Works</h2>
-  <div class="grid">
-    <div class="card"><h3>01. Explore</h3><p>Review available work categories.</p></div>
-    <div class="card"><h3>02. Learn</h3><p>Read the instructions and requirements.</p></div>
-    <div class="card"><h3>03. Verify</h3><p>Confirm the legitimacy of the work provider.</p></div>
-  </div>
-  <p class="notice">Welcome to ROCKY WS EARN. Join our Telegram community for updates and information.</p>
-</section>
-
-
-<section id="telegram">
-  <h2>Join Our Telegram</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>ROCKY WS EARN Group</h3>
-      <p>Community updates ke liye join karein.</p>
-      <a class="btn" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener noreferrer">Join Telegram Group</a>
+<section class="wrap hero" id="home">
+  <div class="reveal">
+    <span class="eyebrow">● YOUR DIGITAL JOURNEY STARTS HERE</span>
+    <h1>ROCKY <span>WS EARN</span></h1>
+    <div class="green" style="font-weight:900;letter-spacing:5px">✦ WORK　◆ LEARN　◆ GROW</div>
+    <p>Explore digital work categories, learn new skills, connect with our Telegram community and stay updated with the latest information.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">➤ Join Telegram ↗</a>
+      <a class="btn btn-outline" href="#work">▦ Explore Categories →</a>
     </div>
-    <div class="card">
-      <h3>ROCKY WS EARN Channel</h3>
-      <p>Latest announcements ke liye join karein.</p>
-      <a class="btn" href="https://t.me/+IGx3IZDG0P9hOGQ1" target="_blank" rel="noopener noreferrer">Join Telegram Channel</a>
+    <div class="perks"><span><b>✦</b> Learn New Skills</span><span><b>◆</b> Stay Informed</span><span><b>✦</b> Grow Together</span></div>
+  </div>
+  <div class="hero-art reveal">
+    <span class="floating">DREAM<br>LEARN<br>EARN</span>
+    <div class="gamer">
+      <div class="crown">♛</div>
+      <div class="mascot">◈</div>
+      <h2>ROCKY <span class="green">WS EARN</span></h2>
+      <p>WORK • LEARN • GROW</p>
     </div>
   </div>
 </section>
 
-<section id="payment">
-  <h2>UPI Payment Information</h2>
-  <div class="card">
-    <h3>Payment QR — Setup Pending</h3>
-    <p>A real QR and verified payment process have not been configured.</p>
-    <p>For a real service, use a legitimate payment provider and verify transactions securely on a server before approving them.</p>
-    <button class="btn outline" onclick="alert('Payment setup is pending. No payment was made.')">View Payment Status</button>
+<div class="wrap stats">
+  <div class="stat"><strong>✦</strong><span>Learn New Skills</span></div>
+  <div class="stat"><strong>04+</strong><span>Work Categories</span></div>
+  <div class="stat"><strong>✓</strong><span>Check Before You Join</span></div>
+  <div class="stat"><strong>➤</strong><span>Telegram Community</span></div>
+</div>
+
+<section class="wrap" id="work">
+  <div class="section-head">
+    <div class="kicker">♛ EXPLORE & LEARN</div>
+    <h2 class="section-title">WORK <span class="green">CATEGORIES</span></h2>
+    <p>Choose a category to explore useful skills. Actual work opportunities are not guaranteed.</p>
   </div>
+  <div class="cards">
+    <article class="card"><div class="card-icon">⌨</div><h3>Data Entry</h3><p>Explore typing, organizing information and basic digital productivity.</p><a class="btn btn-outline" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">Explore Details →</a></article>
+    <article class="card"><div class="card-icon">▣</div><h3>Social Media</h3><p>Discover content planning, community engagement and social media basics.</p><a class="btn btn-outline" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">Explore Details →</a></article>
+    <article class="card"><div class="card-icon">✿</div><h3>Design Work</h3><p>Explore graphic design, layouts, creative tools and visual communication.</p><a class="btn btn-outline" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">Explore Details →</a></article>
+    <article class="card"><div class="card-icon">▶</div><h3>Video Editing</h3><p>Discover editing techniques, short-form content and storytelling basics.</p><a class="btn btn-outline" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">Explore Details →</a></article>
+  </div>
+</section>
+
+<section class="wrap community" id="telegram">
+  <div>
+    <div class="kicker">✦ JOIN OUR COMMUNITY</div>
+    <h2>TELEGRAM <span class="green">COMMUNITY</span></h2>
+    <p>Visit our group to connect with the community, or follow the channel for announcements and updates.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">♟ Join Group ↗</a>
+      <a class="btn btn-outline" href="https://t.me/+IGx3IZDG0P9hOGQ1" target="_blank" rel="noopener">➤ Join Channel ↗</a>
+    </div>
+  </div>
+  <div class="telegram-cards">
+    <div class="telegram-card"><div class="telegram-icon">♟</div><h3>Telegram Group</h3><p>Chat, ask questions and connect with the community.</p><a class="btn btn-primary" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">Join Group →</a></div>
+    <div class="telegram-card"><div class="telegram-icon">➤</div><h3>Telegram Channel</h3><p>Get announcements and community updates.</p><a class="btn btn-primary" href="https://t.me/+IGx3IZDG0P9hOGQ1" target="_blank" rel="noopener">Join Channel →</a></div>
+  </div>
+</section>
+
+<section class="wrap" id="about">
+  <div class="section-head"><div class="kicker">✦ SIMPLE STEPS</div><h2 class="section-title">HOW IT <span class="green">WORKS</span></h2><p>Explore, verify information and connect safely.</p></div>
+  <div class="steps">
+    <div class="step"><div class="number">01</div><div><h3>EXPLORE</h3><p>Browse categories and find topics that interest you.</p></div></div>
+    <div class="step"><div class="number">02</div><div><h3>VERIFY</h3><p>Check the provider, requirements and details before participating.</p></div></div>
+    <div class="step"><div class="number">03</div><div><h3>CONNECT</h3><p>Use our Telegram links for community information and announcements.</p></div></div>
+  </div>
+  <div class="warning">⚠ <strong>Important:</strong> This website does not currently offer verified jobs, guaranteed earnings or a live payment service. Never pay an unverified provider or share your OTP, password or UPI PIN.</div>
 </section>
 </main>
 
-<footer>
-  <div class="logo">♛ ROCKY WS EARN</div>
-  <p>Work • Learn • Grow</p>
-  <p>© 2026 ROCKY WS EARN</p>
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#home"><span class="logo">R</span><span>ROCKY <span class="green">WS EARN</span><span class="tagline">WORK • LEARN • GROW</span></span></a>
+      <div class="footlinks"><a href="#home">Home</a><a href="#work">Work</a><a href="#about">About</a><a href="#telegram">Telegram</a></div>
+      <a class="btn btn-outline" href="https://t.me/+Arvz0tCZ_3o4OTQ9" target="_blank" rel="noopener">➤ Join Community</a>
+    </div>
+    <div class="copyright"><span>© 2026 ROCKY WS EARN. All rights reserved.</span><span>Better Skills → Brighter Future ♛</span></div>
+  </div>
 </footer>
-
 <script>
-function showInfo(category){
-  document.getElementById('workMessage').textContent =
-    category + ': Information about this work category.';
-}
+const menu=document.getElementById('menu');
+const links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
 </script>
 </body>
 </html>
